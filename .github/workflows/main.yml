@@ -1,0 +1,29 @@
+name: "sk840pipeline"
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+jobs:
+  terraform_init_and_plan:
+    runs-on: sahil-runner
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+
+      - name: Azure Login
+        uses: Azure/login@v2.3.0
+        with:
+         client-id: 134e045b-6c91-4b7f-b8d7-bf8845bfc8a7
+         tenant-id: 90eaef6b-3882-4c51-8467-1155649bc19d
+         subscription-id: fbac4321-0f41-46f0-baea-f23a62385eb5
+         
+          
+        
+        
+          
+      
+    
